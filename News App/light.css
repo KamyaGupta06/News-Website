@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{  /* global varibale */
+    --primary-text-color:#183b56;
+    --secondary-text-color:#577592;
+    --accent-color:#2294ed;
+    --padding-inline-section:20px;
+}
+p{
+    font-family: "Roboto",sans-serif;
+    color: var(--secondary-text-color);
+    line-height: 1.4rem;
+}
+a{
+    text-decoration: none;
+    
+}
+ul{
+    list-style-type: none;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+.container{
+    max-width: 1180px;
+    margin-inline: auto;
+    overflow: hidden;
+}
+nav{
+    background-color: #f3faff;
+    box-shadow: 0 0 5px #bbd0e2;
+    position: fixed;
+    top: 0;
+    z-index: 99; /*Keeps the navbar above other elements, ensuring it stays visible.*/
+    left: 0;
+    right: 0;
+}
+.nav-bar{
+    justify-content: space-between; /*we have already made flex class and 
+    added it to same div as of this class so no need again to display-flex */
+    padding-block: 8px; /*Adds 8px padding to the top and bottom of the navba*/
+}
+.company-logo img{
+    cursor: default;
+    width: 50px;
+    height: 50px;
+}
+.nav-links ul{
+    gap: 1rem;
+}
+.nav-items{
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+
+}
+.nav-items:hover{
+    color: var(--secondary-text-color);
+}
+.nav-items:active{ /*Changes the text color to red when the item is clicked.*/
+    color: red;
+}
+
+.nav-item.active{
+    color: var(--accent-color);
+}
+
+.search-bar{
+    position: relative;
+    height: 32px;
+    gap: 0.5rem;
+}
+.news-input{
+    font-family: "Roboto",sans-serif;
+    width:200px;
+    height: 100%;
+    border-radius: 4px;
+    padding: 8px 35px 8px 12px; /* Add right padding to prevent overlap */
+    border:2px solid #bbd0e2
+}
+.clear-btn {
+    position: absolute;
+    right: 50px; /* Adjusted for better alignment */
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #888;
+    background: none;
+    border: none;
+    display: none; 
+}
+
+.clear-btn:hover {
+    color: black;
+}
+.search-button{
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    
+
+}
+.search-button img{
+    height: 30px;
+    width: 30px;
+    border: none;
+    background-color:var(--secondary-text-color);
+}
+main{
+    padding-block: 20px;
+    margin-top: 80px;
+}
+.card-container{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    align-items: start;
+}
+.card{
+    width:360px;
+    min-height: 400px;
+    box-shadow: 0 0 5px #d4ecff;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #fff;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.card:hover{
+    box-shadow: 1px 1px 8px #d4ecff;
+    background-color: #fff;
+    transform: translate(-2px);
+}
+
+.card-header img{
+    width:100%;
+    height: 180px;
+    object-fit: cover;
+}
+.card-content{
+    padding: 12px;
+}
+
+.news-source{
+    margin-block:12px;
+}
+.search{
+    color: #2295ed5b;
+    
+    
+}
+
+#toggle-btn {
+    background-color: #f3faff;
+    border:none;
+    cursor: pointer;
+    font-size: 28px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+

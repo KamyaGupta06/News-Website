@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">;
+    <link rel="stylesheet" id="theme-style" href="light.css">
+</head>
+<body>
+    <nav >
+        <div class="nav-bar container flex">
+        <a href="#" class="company-logo">
+            <img src="logo.png" alt="company logo" >
+        </a>
+        <div class="nav-links ">
+            <ul class="flex">
+                <li class="nav-items nav-item" id="sports" onclick="onNavItemClick('sports')">Sports</li>
+                <li class="nav-items nav-item" id="finance" onclick="onNavItemClick('finance')">Finance</li>
+                <li class="nav-items nav-item" id="politics" onclick="onNavItemClick('politics')">Politics</li>
+            </ul>
+        </div>
+        <div class="search-bar flex">
+            <button id="toggle-btn">
+                <span id="theme-icon" class="material-icons">dark_mode</span>    
+            </button>
+                <input type="text" class="news-input" placeholder="e.g. Science" id="news-text" onclick="cle">
+                <span class="clear-btn" onclick="clearInput()">X</span>
+            <button class="search-button" id="search-button">
+                <i class="fa fa-search search fa-2x"></i> <!-- Search icon -->
+            </button>
+        </div>
+        
+        </div>
+    </div>
+    </nav>
+    <main>
+        <div class="card-container container flex" id="cards-container">
+        </main>
+    
+            <template id="template-news-card">
+            <div class="card">
+                <div class="card-header">
+                    <img src="https://placehold.co/400x200" alt="news-img" id="news-img">
+                </div>
+                <div class="card-content">
+                    <h3 id="news-title">This is the Title</h3>
+                    <h6 class="news-source" id="news-source">End  Gaget</h6>
+                    <p class="news-desc" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto vero autem sint nulla quis. Qui eaque aliquam consectetur aperiam beatae!</p>
+                </div>
+            </div>
+        </template>
+        </div>
+    
+</body>
+
+<script src="script.js"></script>
+</html>
