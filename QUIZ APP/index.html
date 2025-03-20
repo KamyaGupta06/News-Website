@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        
+        <h2>Simple Quiz</h2>
+       
+        
+    </div>
+    
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+</head>
+<body>
+    <h2>Email Validation</h2>
+    <form onsubmit="return false;">
+        <label for="email">Enter Email:</label>
+        <input type="text" id="email" placeholder="example@domain.com"> 
+        <button type="button" onclick="validateEmail()">Validate</button>
+    </form>
+    <p id="result" style="font-weight: bold; color: blue;"></p>
+
+    <script>
+        function validateEmail() {
+            const email = document.getElementById("email").value;
+            let atSymbol = false;
+            let dotAfterAt = false;
+            let atIndex = -1;
+
+            // Check if email contains '@' and '.'
+            for (let i = 0; i < email.length; i++) {
+                if (email[i] === '@') {
+                    if (atSymbol) {
+                        document.getElementById("result").innerText = "Invalid: More than one '@' symbol.";
+                        return;
+                    }
+                    atSymbol = true;
+                    atIndex = i;
+                } else if (email[i] === '.' && atSymbol && i > atIndex + 1) {
+                    dotAfterAt = true;
+                }
+            }
+
+            // Validate email rules
+            if (atSymbol && dotAfterAt && atIndex > 0 && atIndex < email.length - 1) {
+                document.getElementById("result").innerText = "Valid Email!";
+                document.getElementById("result").style.color = "green";
+            } else {
+                document.getElementById("result").innerText = "Invalid Email!";
+                document.getElementById("result").style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html> -->
